@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-class VideoDownloadController{
+class VideoDownloadController extends Controller{
 
 
     public function getVideoDetails($video_id){
