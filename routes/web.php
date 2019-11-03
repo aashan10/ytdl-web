@@ -15,14 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/downloadVideo/{video}', function ( string $video ) {
-    return [
-      'status' => 'success',
-      'video' => [
-          'identifier' => $video,
-          'quality' => [
-              '720p', '1080p', '4K', '360p'
-          ]
-      ]
-    ];
-});
+Route::get('/video-details/{video}', 'YoutubeController@getVideoDetails');
+Route::get('/download', 'YoutubeController@downloadVideo');
